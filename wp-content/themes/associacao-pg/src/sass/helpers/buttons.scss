@@ -1,0 +1,40 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+.button {
+  transition-property: color, background-color, border-color,
+  text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  width: fit-content;
+  text-decoration: none;
+  border-radius: 0.625rem;
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-family: $font-open-sans;
+  text-align: center;
+  cursor: pointer;
+
+  &.button-border{
+    border: 1px solid $orange;
+    color: $orange;
+    padding: 0.75rem;
+  }
+
+  &.button-first{
+    background-color: $white;
+    color: $orange;
+   @extend %buttons;
+  }
+
+  &.button-second{
+    background-color: $blue;
+    color: $white;
+    @extend %buttons;
+    
+    &:hover{
+      background-color: $blue-dark;
+      @include transition-colors;
+    }
+  }
+}

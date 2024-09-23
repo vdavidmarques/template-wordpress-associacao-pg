@@ -1,0 +1,16 @@
+%buttons{
+    text-transform: uppercase;
+    height: 2.5rem;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    border: none;
+}
+
+%pipe{
+    content: "";
+    border-right: 1px solid $gray-dark;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+}

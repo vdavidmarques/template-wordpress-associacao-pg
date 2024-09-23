@@ -1,0 +1,15 @@
+/*
+Theme Name: AssociacaoPg
+Author: KVN Systems | Vinícius Marques
+Description: This project is a web system built using Blade as a template engine, Sass for styling, and WordPress as a CMS tool. The project also makes use of popular plugins such as ACF (Advanced Custom Fields) and Yoast SEO to provide a robust and efficient solution. 
+Version: 2024.1
+Requires PHP: 7.0
+License: GNU General Public License v3 or Later
+License URI: https://www.gnu.org/licenses/gpl.html
+Text Domain: associacaopg
+
+AssociacaoPg WordPress Theme 2011-2024
+AssociacaoPg is distributed under the terms of the GNU GPL
+*/
+
+@import url('dist/css/styles.css');
