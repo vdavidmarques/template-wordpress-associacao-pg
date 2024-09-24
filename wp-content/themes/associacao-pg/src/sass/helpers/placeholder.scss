@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 %buttons{
     text-transform: uppercase;
     height: 2.5rem;
@@ -13,4 +15,34 @@
     display: block;
     position: absolute;
     top: 0;
+}
+
+%icon-settings{
+    width: 32px;
+    height: 32px;
+    background-size: contain;
+    content: "";
+}
+
+%facebook{
+    background-image: url(../../dist/icons/facebook.svg);
+}
+
+%instagram{
+    background-image: url(../../dist/icons/instagram.svg);
+}
+
+%whatsapp{
+    background-image: url(../../dist/icons/whatsapp.svg);
+}
+
+%phone{
+    background-image: url(../../dist/icons/phone.svg);
+    transform: rotate(218deg);
+}
+
+%text-left{
+    @media (min-width: $breakpoint-lg) {
+        text-align: left;
+    }
 }

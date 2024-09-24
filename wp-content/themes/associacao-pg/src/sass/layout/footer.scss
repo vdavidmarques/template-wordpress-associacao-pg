@@ -1,2 +1,142 @@
 @import "../helpers/variables.scss";
 @import "../helpers/mixins.scss";
+@import "../helpers/placeholder.scss";
+
+footer {
+  background-color: $gray;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  color: $blue;
+  font-weight: 700;
+  text-align: center;
+
+  .content {
+    display: grid;
+    align-items: center;
+    @include grid-cols-12;
+    row-gap: 1.25rem;
+
+    @media (min-width: $breakpoint-lg) {
+      column-gap: 1.25rem;
+      align-items: normal;
+    }
+
+    .logo {
+      @include col-span-12;
+      @include mx-auto;
+      text-align: center;
+
+      @media (min-width: $breakpoint-lg) {
+        @include col-span-2;
+      }
+
+      .custom-logo {
+        height: auto;
+      }
+    }
+
+    .address {
+      @include col-span-12;
+      @extend %text-left;
+
+      @media (min-width: $breakpoint-lg) {
+        @include col-span-3;
+      }
+
+      @media (min-width: $breakpoint-xl) {
+        @include col-span-3;
+      }
+    }
+
+    .contact {
+      @include col-span-12;
+      @media (min-width: $breakpoint-lg) {
+        @include col-span-5;
+      }
+
+      @media (min-width: $breakpoint-xl) {
+        @include col-span-4;
+      }
+
+      .subtitle {
+        text-transform: uppercase;
+        margin-bottom: 0.3125rem;
+        font-size: 1rem;
+        @extend %text-left;
+      }
+
+      .info {
+        margin-top: 10px;
+        @extend %text-left;
+      }
+    }
+
+    .lists {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.625rem;
+        align-items: center;
+        
+        @media (min-width: $breakpoint-lg) {
+            align-items: baseline;
+        }
+        
+        .list{
+            display: flex;
+            column-gap: 0.625rem;
+
+            .icon {
+              display: flex;
+              justify-content: center;
+    
+              &.phone {
+                @extend %icon-settings;
+                @extend %phone;
+              }
+    
+              &.wpp {
+                @extend %icon-settings;
+                @extend %whatsapp;
+              }
+
+              &.facebook{
+                @extend %icon-settings;
+                @extend %facebook;
+              }
+
+              &.instagram{
+                @extend %icon-settings;
+                @extend %instagram;
+              }
+            }
+        }
+      }
+
+    .social-medias-copyright {
+      @include col-span-12;
+      row-gap: 0.625rem;
+
+      @media (min-width: $breakpoint-lg) {
+        @include col-span-2;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+
+      .social-medias {
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 0.625rem;
+      }
+    }
+
+    .copyright {
+      @include col-span-12;
+      font-size: 0.75rem;
+      @media (min-width: $breakpoint-lg) {
+        @include col-span-3;
+      }
+    }
+  }
+}
