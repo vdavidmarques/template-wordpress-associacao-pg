@@ -71,6 +71,9 @@
         </div>
         <?php endwhile; ?>
     </div>
+    <div class="cookie">
+        cookie-popup
+    </div>
 </footer>
 </div>
 <?php wp_footer(); ?>
