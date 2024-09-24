@@ -1,0 +1,95 @@
+@import "../../helpers/variables.scss";
+@import "../../helpers/mixins.scss";
+
+.join-now{
+    background-color: $orange;
+    color: $white;
+    padding: 2.5rem 0;
+    @media (min-width: $breakpoint-lg){
+        padding: 6.25rem 0;
+    }
+
+    .content{
+        display: grid;
+        @include grid-cols-12;
+        
+        .infos{
+            @include col-span-12;
+            display: grid;
+            align-items: center;
+
+            @media (min-width: $breakpoint-md){
+                @include col-span-12;
+                column-gap: 40px;
+                @include grid-cols-12;
+            }
+
+            .main-title{
+                font-size: 1.875rem;    
+                line-height: 2.5rem;
+                font-weight: 700;
+                margin-bottom: 1.25rem;
+
+                @media (min-width: $breakpoint-md){
+                    font-size: 3.125rem;
+                    line-height: 3.75rem;
+                    text-align: right;
+                    @include col-span-6;
+                }
+                @media (min-width: $breakpoint-xl){
+                    @include col-span-3;
+                    @include col-start-3;
+                }
+            }
+
+            .price-tag{
+                display: flex;
+                flex-direction: column;
+                align-items: baseline;
+                
+                @media (min-width: $breakpoint-md){
+                    @include col-span-6;
+                }
+
+                .title{
+                    @media (min-width: $breakpoint-lg){
+                        margin-bottom: -30px;
+                    }
+                }
+
+                .title,.currency, .mounth{
+                    font-size: 20px;
+                }
+
+                .price{
+                    font-size: 50px;
+                    font-weight: 700;
+                    @media (min-width: $breakpoint-lg){
+                        font-size: 100px;
+                    }
+                }
+
+                .button-join-now{
+                    background-color: $white;
+                    color: $orange;
+                    font-size: 20px;
+                    font-weight: 700;
+                    border-radius: 20px;
+                    text-transform: uppercase;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                    padding: 5px 20px;
+                    max-width: 200px;
+                    display: block;
+                    text-align: center;
+
+                    &:hover{
+                        background-color: $blue;
+                        color: $white;
+                        @include transition-colors;
+                    }
+                }
+            }
+        }
+    }
+
+}
