@@ -1,197 +1,206 @@
 @import "../helpers/variables.scss";
 @import "../helpers/mixins.scss";
- 
+@import "../helpers/placeholder.scss";
+
 header {
-    display: flex;
+  display: flex;
 
-    .first-header{
-        display: grid;
-        @include grid-cols-12;
-        padding-top: 2.5rem;
-        @include col-span-12;
-        display: grid;
-        @include grid-cols-12;
-        @include mx-auto;
-        
-        @media (min-width: $breakpoint-xl) {
+  .first-header {
+    display: grid;
+    @include grid-cols-12;
+    padding-top: 2.5rem;
+    @include mx-auto;
+
+    @media (min-width: $breakpoint-lg) {
+      align-items: center;
+      padding-top: 80px;
+      padding-bottom: 0.625rem;
+      column-gap: 1.25rem;
+    }
+
+    .logo {
+      @include col-span-12;
+      @include mx-auto;
+      width: 100%;
+      text-align: center;
+
+      @media (min-width: $breakpoint-lg) {
+        @include col-span-3;
+        @include col-start-2;
+        text-align: left;
+      }
+
+      .custom-logo {
+        height: auto;
+        max-width: 15.625rem;
+      }
+    }
+
+    .login {
+      @include col-span-12;
+      display: grid;
+      @include grid-cols-8;
+      margin-top: 1rem;
+
+      @media (min-width: $breakpoint-lg) {
+        @include col-span-8;
+        margin-top: 0;
         align-items: center;
-        padding-top: 80px;
-        padding-bottom: 0.625rem;
-        column-gap: 1.25rem;
-        }
-    
-        .logo {
-        @include col-span-12;
-        @include mx-auto;
-        width: 100%;
-        text-align: center;
-    
-        @media (min-width: $breakpoint-xl) {
-            @include col-span-3;
-            @include col-start-2;
-            text-align: left;
-        }
-    
-        .custom-logo {
-            width: 250px;
-            height: auto;
-    
-            @media (min-width: $breakpoint-xl) {
-            }
-        }
-        }
-    
-        .login {
-        @include col-span-12;
-        display: grid;
-        @include grid-cols-8;
-        margin-top: 1rem;
-    
-        @media (min-width: $breakpoint-xl) {
-            @include col-span-8;
-            margin-top: 0;
-            align-items: center;
-        }
-    
-        .social-networks {
-            @include col-span-12;
-            display: flex;
-            flex-direction: row;
-            column-gap: 0.625rem;
-            @include mx-auto;
-            margin-bottom: 1.25rem;
-            
-            @media (min-width: $breakpoint-xl) {
-            width: 100%;
-            @include col-span-5;
-            justify-content: end;
-            }
-    
-            @media (min-width: $breakpoint-1_5xl) {
-                @include col-span-4;
-            }
+      }
 
-            @media (min-width: $breakpoint-2xl) {
-                @include col-span-5;
-            }
-    
-            .icon {
-            width: 1.5rem;
-            height: 1.5rem;
-            background-repeat: no-repeat;
-            background-size: contain;
-            display: block;
-    
-            &.facebook {
-                background-image: url(../../dist/icons/facebook.svg);
-            }
-            &.instagram {
-                background-image: url(../../dist/icons/instagram.svg);
-            }
-            }
-        }
-    
-        .form {
-            @include col-span-12;
-            display: flex;
-            flex-direction: row;
-            column-gap: 10px;
-            align-items: center;
-            justify-content: center;
-    
-            @media (min-width: $breakpoint-xl) {
-                @include col-span-8;
-                justify-content: start;
-                display: grid;
-                @include grid-cols-8;
-            }
-    
-            input[type="text"],
-            input[type="password"] {
-            width: 100%;
-            height: 1.875rem;
-            border: 1px solid $blue;
-            border-radius: 1.25rem;
-            padding: 0.3125rem 0.625rem;
-            }
-    
-            input::placeholder {
-            color: $gray;
-            }
-    
-            ::placeholder {
-            font-size: 0.75rem;
-            }
-    
-            .username,
-            .password {
-                position: relative;
-                @media (min-width: $breakpoint-xl){
-                    @include col-span-2;
-                }
-            }
-            .icon {
-            width: 1.25rem;
-            height: 1.25rem;
-            position: absolute;
-            top: 0.3125rem;
-            right: 0.625rem;
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center;
-    
-            &.icon-user {
-                background-image: url(../../dist/icons/user.svg);
-            }
-    
-            &.icon-password {
-                background-image: url(../../dist/icons/lock.svg);
-            }
-            }
-    
-            .send {
-            margin-left: 1.25rem;
-            border-radius: 20px;
-            height: 2.5rem;
-            }
-        }
-        }
-    
-        .menu {
+      .social-networks {
         @include col-span-12;
         display: flex;
-        text-align: center;
-        margin-top: 40px;
-        text-transform: uppercase;
+        flex-direction: row;
+        column-gap: 0.625rem;
+        @include mx-auto;
+        margin-bottom: 1.25rem;
+
+        @media (min-width: $breakpoint-lg) {
+          width: 100%;
+          @include col-span-8;
+          justify-content: end;
+        }
+
+        .icon {
+          background-repeat: no-repeat;
+          background-size: contain;
+          display: block;
+          width: 1.5rem;
+          height: 1.5rem;
+
+          &.facebook {
+            @extend %facebook;
+          }
+          &.instagram {
+            @extend %instagram;
+          }
+        }
+      }
+
+      .form {
+        @include col-span-12;
+        display: flex;
         flex-direction: row;
         column-gap: 10px;
-        font-size: 0.8125rem;
-        @include mx-auto;
-    
-        @media (min-width: $breakpoint-xl) {
-            font-size: 0.875rem;
-        }
-    
-        .menu-item {
-            position: relative;
-            &::after {
-            @extend %pipe;
-            }
-    
-            a {
-            padding-left: 0.625rem;
-            }
-    
-            &.last-item {
-            position: relative;
-            @extend %pipe;
-    
-            a {
-                padding-right: 0.625rem;
-            }
-            }
-        }
-        }
-    }
-}
+        align-items: center;
+        justify-content: center;
 
+        @media (min-width: $breakpoint-lg) {
+          @include col-span-8;
+          display: grid;
+          @include grid-cols-8;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+          width: 100%;
+          height: 1.875rem;
+          border: 1px solid $blue;
+          border-radius: 1.25rem;
+          padding: 0.3125rem 0.625rem;
+        }
+
+        input::placeholder {
+          color: $gray;
+        }
+
+        ::placeholder {
+          font-size: 0.75rem;
+        }
+
+        .username,
+        .password {
+          position: relative;
+        }
+        .username{
+          @media (min-width: $breakpoint-lg) {
+            @include col-span-4;
+          }
+        }
+        .password{
+          @media (min-width: $breakpoint-lg) {
+            @include col-span-3;
+          }
+        }
+        .icon {
+          width: 1.25rem;
+          height: 1.25rem;
+          position: absolute;
+          top: 0.3125rem;
+          right: 0.625rem;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+
+          &.icon-user {
+            background-image: url(../../dist/icons/user.svg);
+          }
+
+          &.icon-password {
+            background-image: url(../../dist/icons/lock.svg);
+          }
+        }
+
+        .send {
+          margin-left: 1.25rem;
+          border-radius: 20px;
+          height: 2.5rem;
+          @media (min-width: $breakpoint-lg) {
+            @include col-span-1;
+          }
+        }
+      }
+    }
+
+    .menu {
+      @include col-span-12;
+      display: flex;
+      text-align: center;
+      margin-top: 1.25rem;
+      text-transform: uppercase;
+      flex-direction: row;
+      column-gap: 0.625rem;
+      font-size: 0.8125rem;
+      @include mx-auto;
+
+      @media (min-width: $breakpoint-xl) {
+        font-size: 0.875rem;
+      }
+
+      .menu-item {
+        position: relative;
+        &::before {
+          @extend %pipe;
+        }
+
+        a {
+          font-weight: 700;
+
+          @media (min-width: $breakpoint-sm) {
+            padding-left: 0.625rem;
+          }
+
+          &:hover{
+            color: $orange;
+            @include transition-colors;
+          }
+        }
+
+        &.last-item {
+
+          &::after{
+            @extend %pipe;
+            right: 0;
+          }
+
+          a {
+            @media (min-width: $breakpoint-sm) {
+              padding-right: 0.625rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
