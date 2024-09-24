@@ -41,6 +41,7 @@ footer {
 
       @media (min-width: $breakpoint-lg) {
         @include col-span-3;
+        font-size: 1.125rem;
       }
 
       @media (min-width: $breakpoint-xl) {
@@ -55,7 +56,7 @@ footer {
       }
 
       @media (min-width: $breakpoint-xl) {
-        @include col-span-4;
+        @include col-span-3;
       }
 
       .subtitle {
@@ -83,7 +84,8 @@ footer {
         
         .list{
             display: flex;
-            column-gap: 0.625rem;
+            column-gap: 0.3125rem;
+            align-items: center;
 
             .icon {
               display: flex;
@@ -117,7 +119,7 @@ footer {
       row-gap: 0.625rem;
 
       @media (min-width: $breakpoint-lg) {
-        @include col-span-2;
+        @include col-span-3;
         justify-content: space-between;
         display: flex;
         flex-direction: column;
@@ -133,7 +135,7 @@ footer {
 
     .copyright {
       @include col-span-12;
-      font-size: 0.75rem;
+      font-size: 1rem;
       @media (min-width: $breakpoint-lg) {
         @include col-span-3;
       }

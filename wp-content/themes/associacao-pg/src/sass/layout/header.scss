@@ -32,7 +32,6 @@ header {
 
       .custom-logo {
         height: auto;
-        max-width: 15.625rem;
       }
     }
 
@@ -68,6 +67,11 @@ header {
           display: block;
           width: 1.5rem;
           height: 1.5rem;
+
+          @media (min-width: $breakpoint-lg) {
+            width: 2.1875rem;
+            height: 2.1875rem;
+          }
 
           &.facebook {
             @extend %facebook;

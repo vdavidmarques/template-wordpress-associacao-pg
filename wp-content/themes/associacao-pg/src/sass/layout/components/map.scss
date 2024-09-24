@@ -1,0 +1,81 @@
+@import "../../helpers/variables.scss";
+@import "../../helpers/mixins.scss";
+@import "../../helpers/placeholder.scss";
+
+.map{
+    padding-top: 2.5rem;
+    @media (min-width: $breakpoint-lg){
+        padding-top: 80px; 
+    }
+
+    iframe{
+        width: 100%;
+        min-height: 21.875rem;
+    }
+
+    .social-networks{
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        @include mx-auto;
+        margin-bottom: 2.5rem;
+        
+        @media (min-width: $breakpoint-lg){
+            flex-direction: row;
+            column-gap: 1.25rem;
+            justify-content: center;
+            margin-bottom: 5rem;
+        }
+
+        .title{
+            text-transform: uppercase;
+            color: $blue;
+            font-weight: 700;
+            font-size: 1.875rem;
+        }
+
+        .networks{
+            display: flex;
+            flex-direction: row;
+            column-gap: 1.25rem;
+
+            .icon{
+                width: 3.125rem;
+                height: 3.125rem;
+
+                &.facebook{
+                    @extend %facebook;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: contain;
+                }
+    
+                &.instagram{
+                    @extend %instagram;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: contain;
+                }
+            }
+
+        }
+    }
+
+    .gallery{
+        display: grid;
+        @include grid-cols-1;
+
+        @media (min-width: $breakpoint-md){
+            @include grid-cols-2;
+            column-gap: 0.625rem;
+        }
+
+        @media (min-width: $breakpoint-lg){
+            @include grid-cols-4;
+        }
+    }
+
+    .map-code{
+        margin-top: 1.25rem;
+    }
+}
