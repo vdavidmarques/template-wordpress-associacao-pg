@@ -8,6 +8,7 @@
             $buttonLabel = $button['title'];
             $buttonTarget = $button['target'];
         ?>
+        <?php if(isset($title) && isset($price)): ?>
         <div class="infos">
             <div class="main-title">
                 <h3>
@@ -28,5 +29,6 @@
                 </a>
             </div>
         </div>
+        <?php endif; ?>
     </article>
 </section>

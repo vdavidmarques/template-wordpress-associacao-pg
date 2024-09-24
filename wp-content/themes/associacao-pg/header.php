@@ -42,10 +42,10 @@
                     <div class="login">
                         <div class="social-networks">
                             <?php if ($facebook): ?>
-                                <a class="icon facebook" href="<?php echo $facebook; ?>"></a>
+                                <a class="icon facebook" href="<?php echo $facebook; ?>" target="_blank"></a>
                             <?php endif; ?>
                             <?php if ($instagram): ?>
-                                <a class="icon instagram" href="<?php echo $instagram; ?>"></a>
+                                <a class="icon instagram" href="<?php echo $instagram; ?>" target="_blank"></a>
                             <?php endif; ?>
                         </div>
                     <?php endwhile; ?>

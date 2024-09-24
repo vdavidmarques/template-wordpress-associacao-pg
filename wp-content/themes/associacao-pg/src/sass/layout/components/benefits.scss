@@ -1,0 +1,62 @@
+@import "../../helpers/variables.scss";
+@import "../../helpers/mixins.scss";
+
+.benefits{
+    background-color: $blue-dark;
+    padding: 2.5rem 0;
+    margin-bottom: 2.5rem;
+
+    @media (min-width: $breakpoint-lg){
+        padding: 6.25rem 0;
+    }
+
+    .title{
+        font-size: 1.875rem;
+        text-transform: uppercase;
+        margin-bottom: 2.5rem;
+        color: $blue-medium;
+        text-align: center;
+
+        @media (min-width: $breakpoint-lg){
+            font-size: 3.125rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 5rem;
+        }
+        strong{
+            color: $white;
+        }
+    }
+    .benefits-list{
+        display: grid;
+        @include grid-cols-1;
+        row-gap: 2.5rem;
+
+        @media (min-width: $breakpoint-lg){
+            @include grid-cols-3;
+            column-gap: 5rem;
+        }
+        .benefit{
+            display: flex;
+            flex-direction: column;
+
+            .image{
+                height: 21.875rem;
+                margin-bottom: 1.25rem;
+            }   
+            .content{
+                h1,h2,h3{
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    font-size: 24px;
+                    color: $blue-medium;
+                }
+                p{
+                    color: $white;
+                    font-size: 1.125rem;
+                }
+            }
+        }
+    }
+}
