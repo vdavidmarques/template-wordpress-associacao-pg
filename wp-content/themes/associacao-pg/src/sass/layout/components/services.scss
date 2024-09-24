@@ -1,0 +1,62 @@
+@import "../../helpers/variables.scss";
+@import "../../helpers/mixins.scss";
+
+.services{
+    background-color: $blue-light;
+    color: $blue;
+    padding: 2.5rem 0;
+
+    .contents{
+        display: grid;
+        @include grid-cols-12;
+        
+        .content{
+            @include col-span-12;
+            row-gap: 3.75rem;
+            display: flex;
+            flex-direction: column;
+
+            @media (min-width: $breakpoint-lg){
+                @include col-span-8;
+                @include col-start-3;
+                
+            }
+
+            .service{
+
+                @media (min-width: $breakpoint-lg){
+                    display: grid;
+                    @include grid-cols-8;
+                    column-gap: 2.5rem;
+                }
+
+                .image{
+                    max-height: 12.5rem;
+                    @media (min-width: $breakpoint-lg){
+                        @include col-span-4;
+                    }
+                }
+
+                .description{
+                    margin-top: 0.625rem;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 10px;
+
+                    h1,h2,h3{
+                        font-weight: 700;
+                        font-size: 2.1875rem;
+                    }
+                    p{
+                        font-size: 1rem;
+                    }
+
+                    @media (min-width: $breakpoint-lg){
+                        @include col-span-4;
+                    }
+                }
+            }
+        }
+
+    }
+}
