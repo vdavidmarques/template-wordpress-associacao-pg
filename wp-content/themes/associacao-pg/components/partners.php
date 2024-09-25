@@ -9,7 +9,7 @@
                 foreach ($partners as $partner):
                 ?>
                     <?php if (isset($partner['addLink'])): ?>
-                        <a href="<?php echo $partner['link']; ?>" class="url <?php echo $partner['addLink'] ? 'has-link' : 'empty-link' ?>">
+                        <a href="<?php echo $partner['link']; ?>" class="url scroll-effect <?php echo $partner['addLink'] ? 'has-link' : 'empty-link' ?>">
                             <img src="<?php echo $partner['logo']['url']; ?>" alt="<?php echo $partner['logo']['title']; ?>" class="logo">
                         </a>
                 <?php endif;
@@ -20,8 +20,8 @@
         endif;
         $partnetText = get_field('partner-text', $homepageId);
         ?>
-        <h4 class="title"><?php echo $partnetText ?></h4>
-        <div class="wpp">
+        <h4 class="title scroll-effect"><?php echo $partnetText ?></h4>
+        <div class="wpp scroll-effect">
             <?php
             $args = array(
                 'name' => 'informacoes-gerais',

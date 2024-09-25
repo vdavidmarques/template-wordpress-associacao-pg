@@ -75,24 +75,37 @@
                     <?php echo esc_html(date_i18n(__('Y', 'blankslate'))); ?>. Todos os direitos reservados.
                 </div>
             </div>
-        <?php endwhile; ?>
     </div>
     <?php
-    $showCookieMessage = !isset($_COOKIE['cookieAccepted']);
-
-    if ($showCookieMessage):
+            if ($phoneNumber):
+                foreach ($phoneNumber as $phone):
     ?>
-        <div id="cookie-message">
-            <div class="container texts">
-                <div class="cookie-message">        
-                    <?php echo $cookieText ?>
-                </div>
-                <div class="accept">
-                    <button id="accept-cookies">Continuar e fechar</button>
-                </div>
+            <div class="wpp-float">
+                <a target="_blank" href="https://api.whatsapp.com/send?phone=55<?php echo $phone['wpp'] ?>">
+                    <img src="<?php echo  get_template_directory_uri() . '/dist/icons/wpp-3.svg' ?>" alt="WhatsApp - Consultoria Vida Segura | Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida" itemprop="image">
+                </a>
+            </div>
+    <?php
+                endforeach;
+            endif;
+    ?>
+<?php endwhile; ?>
+<?php
+$showCookieMessage = !isset($_COOKIE['cookieAccepted']);
+
+if ($showCookieMessage):
+?>
+    <div id="cookie-message">
+        <div class="container texts">
+            <div class="cookie-message">
+                <?php echo $cookieText ?>
+            </div>
+            <div class="accept">
+                <button id="accept-cookies">Continuar e fechar</button>
             </div>
         </div>
-    <?php endif; ?>
+    </div>
+<?php endif; ?>
 </footer>
 </div>
 <?php wp_footer(); ?>

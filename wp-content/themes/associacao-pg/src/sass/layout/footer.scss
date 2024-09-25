@@ -141,6 +141,25 @@ footer {
       }
     }
   }
+
+  .wpp-float{
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: contain;
+    position: fixed;
+    z-index: 50;
+    @include anime-bounce;
+    bottom: 11.25rem;
+    right: 15px;
+    display: none;
+    
+    @media screen and (min-width: $breakpoint-lg) {
+        display: block;
+        width: 65px;
+        height: 65px;
+        right: 15px;
+    }
+  }
 }
 
 #cookie-message{

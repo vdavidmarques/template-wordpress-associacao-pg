@@ -1,4 +1,4 @@
-<section class="join-now">
+<section class="join-now scroll-effect">
     <article class="container content">
         <?php 
             $title = get_field('title-join-now', $homepageId);

@@ -7,7 +7,7 @@
             <div class="lists">
                 <div class="list">
                     <?php foreach ($lists as $key => $list): ?>
-                        <article class="list-item list-item-<?php echo $key + 1 ?>">
+                        <article class="scroll-effect list-item list-item-<?php echo $key + 1 ?>">
                             <img src="<?php echo $list['icon']['url']; ?>" alt="<?php echo $list['icon']['title']; ?>" class="icon">
                             <h3 class="title"><?php echo $list['title']; ?></h3>
                         </article>
@@ -22,7 +22,7 @@
     ?>
         <div class="banners-container">
             <?php foreach ($banners as $banner): ?>
-                <article class="banner">
+                <article class="banner scroll-effect">
                     <div class="content">
                         <div class="desc">
                             <?php echo $banner['desc']; ?>

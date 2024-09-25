@@ -1,4 +1,4 @@
-<section class="prize-draw">
+<section class="prize-draw scroll-effect">
     <article>
         <?php
         $image = get_field('prize-draw', $homepageId);

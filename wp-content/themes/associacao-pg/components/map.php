@@ -37,7 +37,7 @@
                 if (isset($posts)):
                     foreach ($posts as $post):
                 ?>
-                        <img src="<?php echo $post['image']['url']; ?>" alt="<?php echo $post['image']['title']; ?>">
+                        <img src="<?php echo $post['image']['url']; ?>" alt="<?php echo $post['image']['title']; ?>" class="scroll-effect">
                 <?php
                     endforeach;
                 endif;

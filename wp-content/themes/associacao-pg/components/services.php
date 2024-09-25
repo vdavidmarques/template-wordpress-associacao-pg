@@ -10,7 +10,7 @@ if (isset($services)):
                     $image = $service['image'];
                     $description = $service['content'];
                 ?>
-                    <article class="service">
+                    <article class="service scroll-effect">
                         <?php if ($image): ?>
                             <div class="image">
                                 <img src="<?php echo $image['url']; ?>" class="image" alt="<?php echo $title; ?>">

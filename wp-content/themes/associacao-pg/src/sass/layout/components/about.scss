@@ -5,10 +5,10 @@
     display: grid;
     text-align: center;
     @include grid-cols-12;
-    padding: 2.5rem 0;
+    padding-bottom: 40px;
     
     @media (min-width: $breakpoint-lg){
-        padding: 5rem 0;
+        padding-bottom: 80px;
     }
 
     .description{
