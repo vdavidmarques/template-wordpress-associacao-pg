@@ -1,6 +1,6 @@
 <?php 
     get_header(); 
-    include_once 'utils/homepage-id.php';
+    include_once 'utils/check-enviroment.php';
     include 'components/main-banner.php';
     include 'components/about.php';
     include 'components/join-now.php';

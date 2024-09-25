@@ -1,2 +1,0 @@
-<?php
-    $homepageId = 40;
