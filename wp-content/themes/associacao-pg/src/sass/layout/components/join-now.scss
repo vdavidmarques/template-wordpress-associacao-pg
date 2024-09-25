@@ -5,6 +5,7 @@
     background-color: $orange;
     color: $white;
     padding: 2.5rem 0;
+
     @media (min-width: $breakpoint-lg){
         padding: 6.25rem 0;
     }
@@ -27,7 +28,6 @@
             .main-title{
                 font-size: 1.875rem;    
                 line-height: 2.5rem;
-                font-weight: 700;
                 margin-bottom: 1.25rem;
 
                 @media (min-width: $breakpoint-md){
@@ -48,12 +48,13 @@
                 align-items: baseline;
                 
                 @media (min-width: $breakpoint-md){
-                    @include col-span-6;
+                    @include col-span-3;
                 }
-
+               
                 .title{
                     @media (min-width: $breakpoint-lg){
-                        margin-bottom: -1.875rem;
+                        margin-bottom: -0.875rem;
+                        @include col-span-3;
                     }
                 }
 
@@ -61,11 +62,48 @@
                     font-size: 1.25rem;
                 }
 
-                .price{
-                    font-size: 3.125rem;
-                    font-weight: 700;
+                .price-info{
+                    display: flex;
+                    flex-direction: row;
+                    
                     @media (min-width: $breakpoint-lg){
-                        font-size: 6.25rem;
+                        margin-top: 1.25rem;
+                        @include col-span-3;
+                    }
+                    
+                    .price{
+                        font-size: 70px;
+                        display: flex;
+                        flex-direction: row;
+                        position: relative;
+
+                        @media (min-width: $breakpoint-lg){
+                            font-size: 6.25rem;
+                        }
+
+                        .cents{
+                            display: flex;
+                            flex-direction: row; 
+                   
+                            .centavos{
+                                font-size: 1.875rem;
+                                @media (min-width: $breakpoint-lg){
+                                    font-size: 3.75rem;
+                                }
+                            }
+                            
+                            .periodo{
+                                font-size: 0.875rem;
+                                position: absolute;
+                                right: -1.25rem;
+                                bottom: 0.625rem;
+                                
+                                @media (min-width: $breakpoint-lg){
+                                    right: -1.875rem;
+                                }
+                            }
+                        }
+
                     }
                 }
 
@@ -73,7 +111,6 @@
                     background-color: $white;
                     color: $orange;
                     font-size: 1.25rem;
-                    font-weight: 700;
                     border-radius: 1.25rem;
                     text-transform: uppercase;
                     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
@@ -81,11 +118,18 @@
                     max-width: 200px;
                     display: block;
                     text-align: center;
+                    margin-top: 0.625rem;
 
                     &:hover{
                         background-color: $blue;
                         color: $white;
                         @include transition-colors;
+                    }
+
+                    @media (min-width: $breakpoint-lg){
+                        @include col-span-3;
+                        margin-left: auto;
+                        margin-top: 0;
                     }
                 }
             }

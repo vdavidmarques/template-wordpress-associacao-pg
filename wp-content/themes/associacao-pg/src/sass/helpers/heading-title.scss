@@ -1,6 +1,9 @@
 @import './variables.scss';
 @import './mixins.scss';
 
-.heading-title {
-
+@font-face {
+    font-family: 'RedHatDisplayLight';
+    src: url('../../dist/fonts/red-hat-display-light.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
 }

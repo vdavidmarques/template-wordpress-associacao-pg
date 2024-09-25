@@ -11,10 +11,9 @@
   text-decoration: none;
   border-radius: 0.625rem;
   font-size: 0.875rem;
-  font-weight: bold;
-  font-family: $font-open-sans;
   text-align: center;
   cursor: pointer;
+  font-family: $font-red-hat-display-light;
 
   &.button-border{
     border: 1px solid $orange;
@@ -34,7 +33,7 @@
     @extend %buttons;
     
     &:hover{
-      background-color: $blue-dark;
+      background-color: $orange;
       @include transition-colors;
     }
   }

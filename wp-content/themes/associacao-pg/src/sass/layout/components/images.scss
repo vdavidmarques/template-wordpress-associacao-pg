@@ -3,7 +3,90 @@
 
 .images{
 
-    .image-2{
-        margin-bottom: 1.25rem;
+    .lists{
+        display: flex;
+        flex-direction: column;
+        align-items: center;        
+        padding: 80px 0;
+
+        .list{
+            display: grid;
+            @include grid-cols-1;
+            row-gap: 1.875rem;
+    
+            @media (min-width: $breakpoint-lg){
+                @include grid-cols-4;
+                column-gap: 5rem;
+            }
+            .list-item {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;    
+
+                .icon{
+                    object-fit: contain;
+                }
+    
+                .title{
+                    font-size: 2.5rem;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    color: $blue;
+                    text-align: center;
+                    margin-top: 0.625rem;
+                }
+            }
+        }
+    }
+    .banners-container{
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+
+        .banner{
+            position: relative;
+
+            .content{
+                width: 40%;
+                position: absolute;
+                top: 0;
+                left: 20px;
+                height: 100%;
+                display: flex;
+                align-items: center;
+
+                @media (min-width: $breakpoint-xl){
+                    width: 35%;
+                    left: 1.875rem;
+                }
+
+                @media (min-width: $breakpoint-1_5xl){
+                    width: 30%;
+                    left: 6.25rem;
+                }
+
+                .desc{
+                    text-align: left;
+                    color: $white;
+                    font-size: 1.375rem;
+
+                    @media (min-width: $breakpoint-lg){
+                        font-size: 2.5rem;
+                    }
+
+                    @media (min-width: $breakpoint-xl){
+                        font-size: 3.125rem;
+                    }
+
+                    h1,h2,h3,h4{
+                        margin-bottom: 0.625rem;
+                    }
+                }
+            }
+            .image-banner{
+                min-height: 25rem;
+            }
+        }
     }
 }

@@ -31,9 +31,10 @@
                 }
 
                 .image{
-                    max-height: 12.5rem;
+                    max-height: 15.625rem;
                     @media (min-width: $breakpoint-lg){
                         @include col-span-4;
+                        max-height: 21.25rem;
                     }
                 }
 
@@ -44,11 +45,11 @@
                     row-gap: 10px;
 
                     h1,h2,h3{
-                        font-weight: 700;
                         font-size: 2.1875rem;
                     }
                     p{
                         font-size: 1rem;
+                        font-family: $font-poppins;
                     }
 
                     @media (min-width: $breakpoint-lg){

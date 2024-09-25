@@ -22,3 +22,18 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", handleScroll);
   handleScroll();
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const cookieMessage = document.getElementById('cookie-message');
+  const acceptButton = document.getElementById('accept-cookies');
+
+  if (!cookieMessage) return;
+
+  function acceptCookies() {
+      document.cookie = "cookieAccepted=true; path=/; max-age=" + 60 * 60 * 24 * 30;
+      localStorage.setItem('cookieAccepted', 'true');
+      cookieMessage.style.display = 'none';
+  }
+
+  acceptButton.addEventListener('click', acceptCookies);
+});

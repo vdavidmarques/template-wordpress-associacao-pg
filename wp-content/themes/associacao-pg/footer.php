@@ -17,7 +17,7 @@
             $socialMedias = get_field('redes_sociais');
             $facebook = $socialMedias['facebook'];
             $instagram = $socialMedias['instagram'];
-
+            $cookieText = get_field('cookie-text');
         ?>
             <div class="logo">
                 <?php
@@ -77,9 +77,22 @@
             </div>
         <?php endwhile; ?>
     </div>
-    <div class="cookie">
-        cookie-popup
-    </div>
+    <?php
+    $showCookieMessage = !isset($_COOKIE['cookieAccepted']);
+
+    if ($showCookieMessage):
+    ?>
+        <div id="cookie-message">
+            <div class="container texts">
+                <div class="cookie-message">        
+                    <?php echo $cookieText ?>
+                </div>
+                <div class="accept">
+                    <button id="accept-cookies">Continuar e fechar</button>
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
 </footer>
 </div>
 <?php wp_footer(); ?>

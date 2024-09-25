@@ -7,7 +7,6 @@ footer {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
   color: $blue;
-  font-weight: 700;
   text-align: center;
 
   .content {
@@ -15,6 +14,7 @@ footer {
     align-items: center;
     @include grid-cols-12;
     row-gap: 1.25rem;
+    font-family: $font-poppins;
 
     @media (min-width: $breakpoint-lg) {
       column-gap: 1.25rem;
@@ -140,5 +140,57 @@ footer {
         @include col-span-3;
       }
     }
+  }
+}
+
+#cookie-message{
+  position: fixed;
+  bottom: 1.875rem;
+  width: 95%;
+  background-color: $white;
+  color: $blue;
+  padding: 1.25rem 0.9375rem;
+  z-index: 1000;
+  border-radius: 1.25rem;
+  @include mx-auto;
+  display: flex;
+  left: 0;
+  right: 0;
+  font-family: $font-poppins;
+
+  .texts{
+    display: grid;
+    @include grid-cols-1;
+
+    @media (min-width: $breakpoint-lg) {
+      @include grid-cols-2;
+      align-items: center;
+    }
+
+    .cookie-message{
+      text-align: left;
+
+      a{
+        color: $orange;
+      }
+    }
+  }
+}
+
+#accept-cookies{
+  margin-left: 0.625rem;
+  padding: 1.25rem 2.5rem;
+  border: 1px solid $orange;
+  border-radius: 0.625rem;
+  background-color: transparent;
+  color: $orange;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+
+  &:hover{
+    background-color: $orange;
+    color: $white;
+    @include transition-colors;
   }
 }
